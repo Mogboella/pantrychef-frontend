@@ -1,21 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
+/* Light Theme */
 :root {
+  /* Font */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+  --font-luckiest-guy: 'Luckiest Guy', cursive;
+
+  /* Base Colors */
+  --color-plum: #604652;
+  --color-rosewood: #735557;
+  --color-khaki: #97866A;
+  --color-peach: #D29F80;
+
+  /* Pastel Tints */
+  --color-pastel-plum: #E8DDE3;
+  --color-pastel-rose: #F1E8E6;
+  --color-pastel-khaki: #F5EEDA;
+  --color-pastel-peach: #FAE5DE;
+
+  /* Theme Roles (Light) */
   --background: #ffffff;
   --foreground: #171717;
+  --color-background: var(--color-pastel-rose);
+  --color-foreground: var(--color-plum);
+  --color-accent: var(--color-peach);
+  --color-muted: var(--color-khaki);
 }
 
+/* Tailwind Inline Theme Tokens */
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-accent: var(--color-accent);
+  --color-muted: var(--color-muted);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-luckiest: var(--font-luckiest-guy);
+}
+
+/* Dark Theme Overrides */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --color-background: #1a1a1a;
+    --color-foreground: #f5f5f5;
+    --color-accent: #D29F80;
+    --color-muted: #97866A;
   }
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+@keyframes bounce-horizontal {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-bounce-horizontal {
+  animation: bounce-horizontal 1.5s infinite;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d97706;
+  top: 40%;
 }
