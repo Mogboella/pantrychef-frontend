@@ -114,11 +114,11 @@ export default function HeaderBar() {
                                 </Link>
                             ))}
                             <div className="flex gap-4 pt-2">
-                                <a href="https://github.com/yourusername/pantrychef" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-black">
+                                <a href="https://github.com/Mogboella/pantrychef" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-black">
                                     <GithubIcon className="w-5 h-5" />
                                     GitHub
                                 </a>
-                                <a href="https://your-deployed-app.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-black">
+                                <a href="https://the-pantry-chef.netlify.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-700 hover:text-black">
                                     <LinkIcon className="w-5 h-5" />
                                     Live Demo
                                 </a>
