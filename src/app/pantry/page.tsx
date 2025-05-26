@@ -509,16 +509,18 @@ export default function PantryPage() {
                                     placeholder="Add new grocery item"
                                     className="flex-1 p-2 border rounded"
                                     onKeyDown={(e) => {
-                                        if (e.key === 'Enter' && e.target.value) {
-                                            addToGroceryList(e.target.value);
-                                            e.target.value = '';
+                                        const target = e.target as HTMLInputElement;
+                                        if (e.key === 'Enter' && target.value) {
+                                            addToGroceryList(target.value);
+                                            target.value = '';
                                         }
                                     }}
+
                                 />
                                 <button
                                     onClick={() => {
-                                        const input = document.querySelector('input[placeholder="Add new grocery item"]');
-                                        if (input.value) {
+                                        const input = document.querySelector('input[placeholder="Add new grocery item"]') as HTMLInputElement | null;
+                                        if (input && input.value) {
                                             addToGroceryList(input.value);
                                             input.value = '';
                                         }
