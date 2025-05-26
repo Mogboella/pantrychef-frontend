@@ -25,7 +25,14 @@ export default function HowItWorks() {
                     >
                         <div className="text-4xl font-bold text-amber-600 mb-4">{i + 1}</div>
                         <p className="text-lg text-black">{step.text}</p>
-                        <Image src={step.image} alt={`Step ${i + 1}`} className="mx-auto h-35 mb-4 mt-4 " />
+                        <div className="relative mx-auto mb-4 mt-6" style={{ width: '170px', height: '150px' }}>
+                            <Image
+                                src={step.image}
+                                alt={`Step ${i + 1}`}
+                                fill
+                                className="object-fit"
+                            />
+                        </div>
                     </motion.div>
                 ))}
             </div>

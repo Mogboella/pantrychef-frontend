@@ -202,7 +202,7 @@ export default function PantryPage() {
                 <h1 className="text-4xl font-bold text-orange-800 flex items-center gap-1">
                     <span className="inline-flex items-center">
                         Pantry
-                        <Image src="/PC.png" alt="Pantry" className="ml-2 h-14 w-14" />
+                        {/* <Image src="/PC.png" alt="Pantry" className="ml-2 h-14 w-14" /> */}
                     </span>
                 </h1>
                 <p className="text-orange-600">Manage your ingredients and plan meals</p>

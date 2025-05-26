@@ -32,8 +32,11 @@ export default function RecipeCard(
                 <Image
                     src={image}
                     alt={title}
-                    className="w-full h-48 object-cover group-hover:brightness-90 transition"
+                    width={600}
+                    height={600}
+                    className="object-cover group-hover:brightness-90 transition"
                 />
+
                 {time && (
                     <span className="absolute top-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
                         {time} mins
