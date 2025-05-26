@@ -1,7 +1,13 @@
-import { useSortable } from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
+import React from "react";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
-export function SortableItem({ id, children }) {
+interface SortableItemProps {
+    id: string;
+    children: React.ReactNode;
+}
+
+export function SortableItem({ id, children }: SortableItemProps) {
     const {
         attributes,
         listeners,
@@ -11,11 +17,11 @@ export function SortableItem({ id, children }) {
         isDragging,
     } = useSortable({ id });
 
-    const style = {
+    const style: React.CSSProperties = {
         transform: CSS.Transform.toString(transform),
         transition,
         opacity: isDragging ? 0.5 : 1,
-        zIndex: isDragging ? 100 : 'auto',
+        zIndex: isDragging ? 100 : "auto",
     };
 
     return (

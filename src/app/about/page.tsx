@@ -27,7 +27,7 @@ export default function ContactAbout() {
                 >
                     <p className="mb-6">
                         PantryChef helps you create delicious meals from ingredients you already have at home.
-                        Simply enter what's in your pantry, and we'll suggest recipes that match your available
+                        Simply enter what&apos;s in your pantry, and we&apos;ll suggest recipes that match your available
                         ingredients, dietary preferences, and cooking time.
                     </p>
                     <p>

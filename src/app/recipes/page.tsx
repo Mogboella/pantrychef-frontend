@@ -1,6 +1,6 @@
 "use client";
 import RecipeCard from "@/components/RecipeCard";
-import { Bars3Icon, MagnifyingGlassIcon, PhotoIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -38,7 +38,7 @@ export default function Recipes() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="font-luckiest text-center text-white text-3xl mb-4">
-                        What's In Your Pantry ?
+                        What&apos;s In Your Pantry ?
                 </motion.h1>
             </div>
             <motion.div className="bg-white rounded-xl shadow-sm p-6 mb-12 max-w-4xl mx-auto">

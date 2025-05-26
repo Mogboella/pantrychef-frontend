@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function RecipeCard(
     {
         title,
@@ -27,7 +29,7 @@ export default function RecipeCard(
         >
             {/* Image with time badge */}
             <div className="relative">
-                <img
+                <Image
                     src={image}
                     alt={title}
                     className="w-full h-48 object-cover group-hover:brightness-90 transition"

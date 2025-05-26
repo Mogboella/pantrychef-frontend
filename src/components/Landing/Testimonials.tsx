@@ -95,7 +95,7 @@ export default function Testimonials() {
 function TestimonialCard({ author, quote }: { author: string; quote: string }) {
     return (
         <div className="bg-white p-6 rounded-xl shadow h-full mx-2">
-            <p className="italic text-gray-700">"{quote}"</p>
+            <p className="italic text-gray-700">&quot;{quote}&quot;</p>
             <p className="mt-4 font-semibold text-right text-amber-700">— {author}</p>
         </div>
     );

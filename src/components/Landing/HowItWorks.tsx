@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 const steps = [
     { text: 'Add your Ingredients', image: '/undraw_add-files_d04y.svg' },
@@ -24,7 +25,7 @@ export default function HowItWorks() {
                     >
                         <div className="text-4xl font-bold text-amber-600 mb-4">{i + 1}</div>
                         <p className="text-lg text-black">{step.text}</p>
-                        <img src={step.image} alt={`Step ${i + 1}`} className="mx-auto h-35 mb-4 mt-4 " />
+                        <Image src={step.image} alt={`Step ${i + 1}`} className="mx-auto h-35 mb-4 mt-4 " />
                     </motion.div>
                 ))}
             </div>

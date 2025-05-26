@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image'
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DragStartEvent, DragEndEvent } from '@dnd-kit/core';
@@ -89,6 +91,7 @@ export default function PantryPage() {
 
         const savedGrocery = localStorage.getItem('groceryList');
         if (savedGrocery) setGroceryList(JSON.parse(savedGrocery));
+
     }, []);
 
     // Save to localStorage when changes occur
@@ -108,6 +111,7 @@ export default function PantryPage() {
 
         setPantryItems([...pantryItems, item]);
         setNewItem({ id: '', name: '', category: 'grains', quantity: 1, expiry: '' });
+        setCategories([])
         setIsAddingItem(false);
     };
 
@@ -154,6 +158,8 @@ export default function PantryPage() {
         const { active } = event;
         setActiveId(active.id.toString());
 
+        console.log(activeId)
+
         if (activeTab === 'pantry') {
             const item = pantryItems.find(i => i.id === active.id);
             if (item) setDraggedItem(item);
@@ -196,7 +202,7 @@ export default function PantryPage() {
                 <h1 className="text-4xl font-bold text-orange-800 flex items-center gap-1">
                     <span className="inline-flex items-center">
                         Pantry
-                        <img src="/PC.png" alt="Pantry" className="ml-2 h-14 w-14" />
+                        <Image src="/PC.png" alt="Pantry" className="ml-2 h-14 w-14" />
                     </span>
                 </h1>
                 <p className="text-orange-600">Manage your ingredients and plan meals</p>
